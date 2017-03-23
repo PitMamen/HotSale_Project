@@ -125,23 +125,11 @@ public class WareListActivity extends AppCompatActivity  implements Pager.OnPage
 
       //初始化 tab
     private void initTab(){
-        TabLayout.Tab tab= mTablayout.newTab();
-        tab.setText("默认");
-        tab.setTag(TAG_DEFAULT);
-        mTablayout.addTab(tab);
+        mTablayout.addTab(mTablayout.newTab().setText("默认").setTag(TAG_DEFAULT));
 
+        mTablayout.addTab(mTablayout.newTab().setText("价格").setTag(TAG_PRICE));
 
-        tab= mTablayout.newTab();
-        tab.setText("价格");
-        tab.setTag(TAG_PRICE);
-        mTablayout.addTab(tab);
-
-
-        tab= mTablayout.newTab();
-        tab.setText("销量");
-        tab.setTag(TAG_SALE);
-        mTablayout.addTab(tab);
-
+        mTablayout.addTab(mTablayout.newTab().setText("销量").setTag(TAG_SALE));
 
 
         mTablayout.setOnTabSelectedListener(this);   //给mTablayout注册注册监听
